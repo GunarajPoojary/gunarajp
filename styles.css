@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+/* Global styles */
+body {
+font-family: 'Roboto Mono', monospace;
+margin: 0;
+padding: 0;
+color: #2a2323;
+background-color: #983939;
+}
+
+a {
+text-decoration: none;
+color: #ae0101;
+}
+
+ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.btn {
+display: inline-block;
+padding: 10px 20px;
+background-color: #055aa3;
+color: #ffffff;
+border-radius: 4px;
+transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+background-color: #412988;
+}
+
+/* Header styles */
+header {
+background-color: #f8e0e0;
+box-shadow: 0 0 10px rgba(255, 253, 253, 0.1);
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 100;
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+}
+
+nav ul li {
+display: inline-block;
+margin-right: 20px;
+}
+
+nav ul li:last-child {
+margin-right: 0;
+}
+
+nav ul li a {
+font-size: 18px;
+}
+
+/* Main styles */
+#hero {
+background-image: url('https://www.example.com/hero-image.jpg');
+background-color: #5550e6;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+color: #ffffff;
+}
+
+#hero h1 {
+font-size: 60px;
+margin-bottom: 20px;
+}
+
+#hero p {
+font-size: 24px;
+margin-bottom: 40px;
+}
+
+#about {
+background-color: #671be9;
+padding: 100px 20px;
+text-align: center;
+}
+
+#about h2 {
+font-size: 48px;
+margin-bottom: 20px;
+}
+
+#about p {
+font-size: 18px;
+line-height: 1.5;
+margin-bottom: 50px;
+}
+
+#portfolio {
+padding: 100px 20px;
+text-align: center;
+}
+
+#portfolio h2 {
+font-size: 48px;
+margin-bottom: 20px;
+}
+
+.project {
+margin-bottom: 50px;
+}
+
+.project h3 {
+font-size: 36px;
+margin-bottom: 10px;
+}
+
+.project p {
+font-size: 18px;
+line-height: 1.5;
+margin-bottom: 20px;
+}
+
+.project .btn {
+margin-top: 10px;
+}
+
+#contact {
+background-color: #bf5fa5;
+padding: 100px 20px;
+text-align: center;
+}
+
+#contact h2 {
+font-size: 48px;
+margin-bottom: 20px;
+}
+
+form {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
