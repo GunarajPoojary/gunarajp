@@ -1,54 +1,47 @@
-// Smooth scrolling for links
-const links = document.querySelectorAll('nav ul li a');
-
-for (const link of links) {
-link.addEventListener('click', clickHandler);
-}
-
-function clickHandler(e) {
-e.preventDefault();
-const href = this.getAttribute('href');
-const offsetTop = document.querySelector(href).offsetTop;
-
-scroll({
-top: offsetTop,
-behavior: "smooth"
-});
-}
-
-// Interactive game cards
-const games = document.querySelectorAll('.game');
-
-for (const game of games) {
-const btn = game.querySelector('.btn');
-btn.addEventListener('click', () => {
-game.classList.toggle('show');
-btn.textContent = game.classList.contains('show') ? 'Hide Game' : 'Play Game';
-});
-}
-
-// Game ratings
-const ratings = document.querySelectorAll('.rating');
-
-for (const rating of ratings) {
-const stars = rating.querySelectorAll('.star');
-stars.forEach((star, i) => {
-star.addEventListener('click', () => {
-rating.setAttribute('data-rating', i + 1);
-updateRating(rating);
-});
-});
-updateRating(rating);
-}
-
-function updateRating(rating) {
-const ratingValue = rating.getAttribute('data-rating');
-const stars = rating.querySelectorAll('.star');
-stars.forEach((star, i) => {
-if (i < ratingValue) {
-star.classList.add('rated');
-} else {
-star.classList.remove('rated');
-}
-});
-}
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+  
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+  
+  // Form submission handling
+  document.querySelector('form').addEventListener('submit', function (e) {
+    e.preventDefault();
+  
+    // Retrieve form input values
+    const name = document.querySelector('input[type="text"]').value;
+    const email = document.querySelector('input[type="email"]').value;
+    const message = document.querySelector('textarea').value;
+  
+    // Perform form validation here if needed
+  
+    // Send form data to server
+    // Replace the URL below with the appropriate endpoint for your server-side form handling
+    fetch('https://example.com/submit-form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        message: message
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Handle the response from the server
+      // Display success message or handle errors
+      console.log(data);
+    })
+    .catch(error => {
+      // Handle any network errors or server errors
+      console.log(error);
+    });
+  });
+  

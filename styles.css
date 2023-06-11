@@ -1,154 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
-
-/* Global styles */
-body {
-font-family: 'Roboto Mono', monospace;
-margin: 0;
-padding: 0;
-color: #2a2323;
-background-color: #983939;
-}
-
-a {
-text-decoration: none;
-color: #ae0101;
-}
-
-ul {
-list-style: none;
-margin: 0;
-padding: 0;
-}
-
-.btn {
-display: inline-block;
-padding: 10px 20px;
-background-color: #055aa3;
-color: #ffffff;
-border-radius: 4px;
-transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-background-color: #412988;
-}
-
-/* Header styles */
-header {
-background-color: #f8e0e0;
-box-shadow: 0 0 10px rgba(255, 253, 253, 0.1);
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-z-index: 100;
-}
-
-nav {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px;
-}
-
-nav ul li {
-display: inline-block;
-margin-right: 20px;
-}
-
-nav ul li:last-child {
-margin-right: 0;
-}
-
-nav ul li a {
-font-size: 18px;
-}
-
-/* Main styles */
-#hero {
-background-image: url('https://www.example.com/hero-image.jpg');
-background-color: #5550e6;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-text-align: center;
-color: #ffffff;
-}
-
-#hero h1 {
-font-size: 60px;
-margin-bottom: 20px;
-}
-
-#hero p {
-font-size: 24px;
-margin-bottom: 40px;
-}
-
-#about {
-background-color: #671be9;
-padding: 100px 20px;
-text-align: center;
-}
-
-#about h2 {
-font-size: 48px;
-margin-bottom: 20px;
-}
-
-#about p {
-font-size: 18px;
-line-height: 1.5;
-margin-bottom: 50px;
-}
-
-#portfolio {
-padding: 100px 20px;
-text-align: center;
-}
-
-#portfolio h2 {
-font-size: 48px;
-margin-bottom: 20px;
-}
-
-.project {
-margin-bottom: 50px;
-}
-
-.project h3 {
-font-size: 36px;
-margin-bottom: 10px;
-}
-
-.project p {
-font-size: 18px;
-line-height: 1.5;
-margin-bottom: 20px;
-}
-
-.project .btn {
-margin-top: 10px;
-}
-
-#contact {
-background-color: #bf5fa5;
-padding: 100px 20px;
-text-align: center;
-}
-
-#contact h2 {
-font-size: 48px;
-margin-bottom: 20px;
-}
-
-form {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-}
+/* Reset default styles for better consistency */
+html, body, h1, h2, h3, p, ul, li, figure, figcaption, form, input, textarea, button, video {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set a default background color and font styles */
+  body {
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Define styles for the header */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  header nav ul li {
+    margin-left: 10px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Style the main content section */
+  main {
+    padding: 20px;
+  }
+  
+  /* Style the hero section */
+  #hero {
+    background-color: #f8f8f8;
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  #hero h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  #hero p {
+    color: #777;
+    margin-bottom: 30px;
+  }
+  
+  /* Style the portfolio section */
+  #portfolio {
+    margin-top: 50px;
+  }
+  
+  #portfolio h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .project {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .project h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .project p {
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  .project video {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Style the about section */
+  #about {
+    margin-top: 50px;
+    background-color: #f8f8f8;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  #about h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  #about p {
+    color: #777;
+    margin-bottom: 30px;
+  }
+  
+  /* Style the contact section */
+  #contact {
+    margin-top: 50px;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  #contact h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #555;
+  }
+  
