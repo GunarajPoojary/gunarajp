@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Helix Jump Game Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#personal-projects">Projects</a></li>
+        <li><a href="index.html#resume">Resume</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="game-details">
+      <h2>Helix Jump</h2>
+      <p>A first-person shooter game set in a post-apocalyptic world. You are tasked with navigating through dangerous environments and defeating enemies to complete missions.</p>
+      <p>Key Features:</p>
+      <ul>
+        <li>Intense combat with various weapon options</li>
+      </ul>
+      <p>For more information or to play the game, please contact me.</p>
+
+      <h3>Unity Script:</h3>
+      <pre>
+        <code id="unity-script">
+            using System.Collections;
+            using System.Collections.Generic;
+            using UnityEngine;
+            
+            public class SliceSpawner : MonoBehaviour
+            {
+                public GameObject softSlice;
+                public GameObject hardSlice;
+                private GameObject[] slices = new GameObject[8];
+                private int emptyIndex1;
+                private int emptyIndex2;
+                private int softSliceIndex;
+                private int hardSliceIndex1;
+                private int hardSliceIndex2;
+                public GameObject parentGameObject;
+                
+                // Update is called once per frame
+                void Update()
+                {
+                    int spawnAngle = 45;
+            
+                    while (emptyIndex1 == emptyIndex2 || emptyIndex1 == softSliceIndex || emptyIndex1 == hardSliceIndex1 || emptyIndex1 == hardSliceIndex2 || emptyIndex2 == softSliceIndex || emptyIndex2 == hardSliceIndex1 || emptyIndex2 == hardSliceIndex2 || hardSliceIndex1 == hardSliceIndex2)
+                    {
+                        emptyIndex1 = Random.Range(0, 8);
+                        emptyIndex2 = Random.Range(0, 8);
+                        softSliceIndex = Random.Range(0, 8);
+                        hardSliceIndex1 = Random.Range(0, 8);
+                        hardSliceIndex2 = Random.Range(0, 8);
+                    }
+                    
+            
+                    for (int i = 0; i < 8; i++)
+                    {
+                        if (i == emptyIndex1)
+                        {
+                            continue;
+                        }
+                        else if (i == emptyIndex2)
+                        {
+                            continue;
+                        }
+            
+                        if (i == softSliceIndex)
+                        {
+                            slices[i] = Instantiate(softSlice, transform.position, Quaternion.Euler(90, 0, i * spawnAngle));
+                            transform.SetParent(parentGameObject.transform);
+                        }
+                        else if (i == hardSliceIndex1)
+                        {
+                            slices[i] = Instantiate(hardSlice, transform.position, Quaternion.Euler(90, 0, i * spawnAngle));
+                            transform.SetParent(parentGameObject.transform);
+                        }
+                        else if (i == hardSliceIndex2)
+                        {
+                            slices[i] = Instantiate(hardSlice, transform.position, Quaternion.Euler(90, 0, i * spawnAngle));
+                            transform.SetParent(parentGameObject.transform);
+                        }
+                        else
+                        {
+                            slices[i] = Instantiate(softSlice, transform.position, Quaternion.Euler(90, 0, i * spawnAngle));
+                            transform.SetParent(parentGameObject.transform);
+                        }
+                    }
+                }
+            }
+            
+        </code>
+      </pre>
+
+      <button id="copy-script" onclick="copyScript()">Copy Script</button>
+
+      <script>
+        function copyScript() {
+          const scriptElement = document.getElementById('unity-script');
+          const scriptText = scriptElement.innerText;
+          navigator.clipboard.writeText(scriptText).then(() => {
+            alert('Script copied to clipboard!');
+          }).catch((error) => {
+            console.error('Failed to copy script:', error);
+          });
+        }
+      </script>
+    </section>
+  </main>
+</body>
+</html>

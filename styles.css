@@ -1,139 +1,228 @@
-/* Reset default styles for better consistency */
-html, body, h1, h2, h3, p, ul, li, figure, figcaption, form, input, textarea, button, video {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Set a default background color and font styles */
-  body {
-    background-color: #f8f8f8;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  /* Define styles for the header */
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  header nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  header nav ul li {
-    margin-left: 10px;
-  }
-  
-  header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Style the main content section */
-  main {
-    padding: 20px;
-  }
-  
-  /* Style the hero section */
-  #hero {
-    background-color: #f8f8f8;
-    padding: 100px 0;
-    text-align: center;
-  }
-  
-  #hero h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  #hero p {
-    color: #777;
-    margin-bottom: 30px;
-  }
-  
-  /* Style the portfolio section */
-  #portfolio {
-    margin-top: 50px;
-  }
-  
-  #portfolio h2 {
-    font-size: 24px;
-    margin-bottom: 30px;
-  }
-  
-  .project {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #fff;
-  }
-  
-  .project h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .project p {
-    color: #777;
-    margin-bottom: 20px;
-  }
-  
-  .project video {
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Style the about section */
-  #about {
-    margin-top: 50px;
-    background-color: #f8f8f8;
-    padding: 50px 0;
-    text-align: center;
-  }
-  
-  #about h2 {
-    font-size: 24px;
-    margin-bottom: 30px;
-  }
-  
-  #about p {
-    color: #777;
-    margin-bottom: 30px;
-  }
-  
-  /* Style the contact section */
-  #contact {
-    margin-top: 50px;
-    padding: 50px 0;
-    text-align: center;
-  }
-  
-  #contact h2 {
-    font-size: 24px;
-    margin-bottom: 30px;
-  }
-  
-  form input,
-  form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  form button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  form button:hover {
-    background-color: #555;
-  }
-  
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #000000;
+      background-color: #ffffff;
+    }
+
+    a {
+      text-decoration: none;
+      color: #0078d4;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0078d4;
+      color: #ffffff;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #004578;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav ul li:last-child {
+      margin-right: 0;
+    }
+
+    nav ul li a {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* Main styles */
+    #hero {
+      background-image: url('https://www.example.com/hero-image.jpg');
+      background-color: #0078d4;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    #hero h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    #hero p {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    #about {
+      background-color: #f3f3f3;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    #about h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 50px;
+    }
+
+    #personal-projects {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    #personal-projects h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .project {
+      margin-bottom: 50px;
+    }
+
+    .project h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    /* Resume styles */
+    #resume {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    #resume h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .centered {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .centered a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0078d4;
+      color: #ffffff;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .centered a:hover {
+      background-color: #004578;
+    }
+
+    #resume div {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    #resume h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    #resume p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    /* Contact styles */
+    #contact {
+      background-color: #0078d4;
+      color: #ffffff;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    #contact h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input,
+    textarea {
+      margin-bottom: 20px;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ffffff;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 300px;
+    }
+
+    textarea {
+      width: 300px;
+      resize: none;
+    }
+
+    button[type="submit"] {
+      padding: 10px 20px;
+      background-color: #ffffff;
+      color: #0078d4;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #f3f3f3;
+    }
